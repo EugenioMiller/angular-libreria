@@ -10,11 +10,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor= "let libro of libros">
+        <tr *ngFor= "let libro of libros"> 
             <td>{{libro.autor}}</td>
             <td>{{libro.nombre}}</td>
-            <td>{{libro.precio}}</td>
-            <td><span class="badge badge-danger" *ngIf="libro.stock==0">Sin Stock</span> <span class="badge badge-success" *ngIf= "libro.stock != 0">{{libro.stock}}</span></td>
+            <td>{{libro.precio | currency }}</td>
+            <td><span class="badge badge-danger" *ngIf="libro.stock==0">Sin Stock</span> 
+                <span class="badge badge-success" *ngIf= "libro.stock != 0">{{libro.stock}}</span>
+            </td>
         </tr>
     </tbody>
 </table>
