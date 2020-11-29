@@ -10,23 +10,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{libro1.autor}}</td>
-            <td>{{libro1.nombre}}</td>
-            <td>{{libro1.precio}}</td>
-            <td>{{libro1.stock}}</td>
-        </tr>
-        <tr>
-            <td>{{libro2.autor}}</td>
-            <td>{{libro2.nombre}}</td>
-            <td>{{libro2.precio}}</td>
-            <td>{{libro2.stock}}</td>
-        </tr>
-        <tr>
-            <td>{{libro3.autor}}</td>
-            <td>{{libro3.nombre}}</td>
-            <td>{{libro3.precio}}</td>
-            <td>{{libro3.stock}}</td>
+        <tr *ngFor= "let libro of libros">
+            <td>{{libro.autor}}</td>
+            <td>{{libro.nombre}}</td>
+            <td>{{libro.precio}}</td>
+            <td><span class="badge badge-danger" *ngIf="libro.stock==0">Sin Stock</span> <span class="badge badge-success" *ngIf= "libro.stock != 0">{{libro.stock}}</span></td>
         </tr>
     </tbody>
 </table>

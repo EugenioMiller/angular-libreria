@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Libro } from './Libros';
 
 @Component({
   selector: 'app-libros-lista',
@@ -7,26 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibrosListaComponent implements OnInit {
 
-  libro1= {
+  libros: Libro [] = [ 
+    {
     "autor" : "John Katzenbach",
     "nombre" : "El psicoanalísta",
     "precio" : 800,
-    "stock" : 20  
-  }
+    "stock" : 20,  
+    },
+    {
+      "autor" : "J.K. Rowling",
+      "nombre" : "Harry Potter y la piedra filosofal",
+      "precio" : 650,
+      "stock" : 15,  
+    },
+    {
+      "autor" : "George R.R Martin",
+      "nombre" : "Choque de Reyes",
+      "precio" : 700,
+      "stock" : 0,  
+    },
+  ]
 
-  libro2= {
-    "autor" : "J.K. Rowling",
-    "nombre" : "Harry Potter y la piedra filosofal",
-    "precio" : 650,
-    "stock" : 15  
-  }
 
-  libro3= {
-    "autor" : "George R.R Martin",
-    "nombre" : "Choque de Reyes",
-    "precio" : 700,
-    "stock" : 8  
-  }
+
+
 
   constructor() { }
 
