@@ -8,13 +8,14 @@ import { CarritoComprasComponent } from './carrito-compras/carrito-compras.compo
 import { LibreriaHomeComponent } from './libreria-home/libreria-home.component';
 import { LibreriaAboutComponent } from './libreria-about/libreria-about.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LibrosListaComponent,
     CarritoComprasComponent,
     LibreriaHomeComponent,
-    LibreriaAboutComponent
+    LibreriaAboutComponent,
   ],
   imports: [
     BrowserModule,
