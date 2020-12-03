@@ -8,6 +8,7 @@
             <th>Precio</th>
             <th>Stock</th>
             <th>Encargue</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -15,11 +16,15 @@
             <td>{{libro.autor}}</td>
             <td>{{libro.nombre}}</td>
             <td>{{libro.precio | currency }}</td>
-            <td><span class="badge badge-danger" *ngIf="libro.stock==0">Sin Stock</span> 
+            <td>
+                <span class="badge badge-danger" *ngIf="libro.stock==0">Sin Stock</span> 
                 <span class="badge badge-success" *ngIf= "libro.stock != 0">{{libro.stock}}</span>
             </td>
             <td>
                 <app-input-number [(value)]="libro.valor" [max]="libro.stock" *ngIf="libro.stock !=0" > </app-input-number>
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="AgregarACarrito(libro)" *ngIf= "libro.valor !=0">Agregar al carrito</button>
             </td>
         </tr>
     </tbody>

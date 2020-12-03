@@ -1,1 +1,16 @@
-<h1>Carrito</h1>
+<h2>Carrito</h2>
+
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let libro of carritoDeCompras$ | async"> 
+            <td>{{libro.nombre}}</td>
+            <td>{{libro.valor}}</td>
+        </tr>
+    </tbody>
+</table>

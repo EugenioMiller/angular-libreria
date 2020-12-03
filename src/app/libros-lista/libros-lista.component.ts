@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarroDeLibrosService } from '../carro-de-libros.service';
 import { Libro } from './Libros';
 
 @Component({
@@ -32,13 +33,16 @@ export class LibrosListaComponent implements OnInit {
     },
   ]
 
-
-
-
-
-  constructor() { }
+  constructor(private carro: CarroDeLibrosService) {
+   }
 
   ngOnInit(): void {
+  }
+
+  AgregarACarrito(libro): void{
+    this.carro.AgregarACarrito(libro);
+    libro.stock -= libro.valor;
+    libro.valor = 0;
   }
 
 }
