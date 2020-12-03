@@ -28,7 +28,7 @@ export class LibrosListaComponent implements OnInit {
       "autor" : "George R.R Martin",
       "nombre" : "Choque de Reyes",
       "precio" : 700,
-      "stock" : 0,  
+      "stock" : 2,  
       "valor": 0, 
     },
   ]
