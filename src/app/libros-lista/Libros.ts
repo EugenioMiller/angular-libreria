@@ -3,4 +3,5 @@ export interface Libro {
     nombre: string;
     precio: number;
     stock: number;
+    valor: number;
 }

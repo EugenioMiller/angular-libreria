@@ -7,6 +7,8 @@ import { LibrosListaComponent } from './libros-lista/libros-lista.component';
 import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 import { LibreriaHomeComponent } from './libreria-home/libreria-home.component';
 import { LibreriaAboutComponent } from './libreria-about/libreria-about.component';
+import { InputNumberComponent } from './input-number/input-number.component';
+import { FormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -16,10 +18,12 @@ import { LibreriaAboutComponent } from './libreria-about/libreria-about.componen
     CarritoComprasComponent,
     LibreriaHomeComponent,
     LibreriaAboutComponent,
+    InputNumberComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
